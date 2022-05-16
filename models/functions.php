@@ -1,6 +1,7 @@
 <?php
 
 class Article {
+ // Private and Public members
     private $newstb = "news";
     public $id;
     public $title;
@@ -8,7 +9,7 @@ class Article {
     public $content;
     public $author;
     public $image;
-	  public $date;
+    public $date;
     private $conn;
     
   // The default constructor will initiate the database connection
