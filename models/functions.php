@@ -20,16 +20,22 @@ class Article {
         $this->conn = $db;
     }
 
- 
+ 	// For display record from the db
  	function display(){
  
 	}
+	
+	// For adding a new post
+ 	function add(){
  
+	}
+ 	
+	// For removing posts
  	function remove(){
 	 
 	}
  
- 
+ 	// For updating records
   	function update(){
 	 
 	}
