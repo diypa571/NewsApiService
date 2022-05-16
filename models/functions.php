@@ -2,7 +2,9 @@
 
 class Article {
  // Private and Public members
-    private $newstb = "news";
+    private $newstb = "news"; // the news table
+    private $conn; // the connection
+   // Column names in the news table
     public $id;
     public $title;
     public $summary;
@@ -10,7 +12,7 @@ class Article {
     public $author;
     public $image;
     public $date;
-    private $conn;
+
     
   // The default constructor will initiate the database connection
   // The constructor has one parameter, that will be used for the connection
