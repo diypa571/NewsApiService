@@ -20,6 +20,20 @@ class Article {
         $this->conn = $db;
     }
 
+ 
+ 	function display(){
+ 
+	}
+ 
+ 	function remove(){
+	 
+	}
+ 
+ 
+  	function update(){
+	 
+	}
+ 
 
 }
 ?>
