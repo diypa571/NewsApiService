@@ -20,10 +20,27 @@ class Article {
         $this->conn = $db;
     }
 
- 	// For display record from the db
- 	function display(){
- 
+	
+	
+	// For display record from the db
+	function display(){
+		// If we have a known id for one article
+	if($this->id) {
+		$query = $this->conn->prepare("SELECT * FROM ".$this->newstb." WHERE id = ?");
+		$query->bind_param("i", $this->id);
+	} else {
+		// We dont specify one id, display all
+		$query = $this->conn->prepare("SELECT * FROM ".$this->newstb);
 	}
+		// Execute the query
+	$query->execute();
+
+	$result = $query->get_result();
+	return $result;
+	}
+	
+	
+	 
 	
 	// For adding a new post
  	function add(){
