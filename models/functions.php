@@ -44,7 +44,18 @@ class Article {
 	
 	// For adding a new post
  	function add(){
- 
+ 	$query = $this->conn->prepare("	INSERT INTO ".$this->newstb."(`title`, `summary`, `content`, `author`, `image`, `date`)	VALUES(?,?,?,?,?)");
+		$this->title = $this->title;
+		$this->summary = $this->summary;
+		$this->content = $this->content;
+		$this->author = $this->author;
+		$this->image = $this->image;;
+    $this->date = $this->date;
+		$query->bind_param("ssssss", $this->title, $this->summary, $this->content, $this->author, $this->image, $this->date);
+		if($query->execute()){
+			return true;
+		}
+		return false;
 	}
  	
 	// For removing posts
