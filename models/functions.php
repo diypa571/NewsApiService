@@ -54,9 +54,24 @@ class Article {
  
  	// For updating records
   	function update(){
-	 
-	}
- 
+		$query = $this->conn->prepare("
+			UPDATE ".$this->newstb."
+			SET title= ?, summary = ?, content = ?, author = ?, image = ?
+			WHERE id = ?");
 
-}
+		$this->id = $this->id;
+		$this->title = $this->title;
+		$this->summary = $this->summary;
+		$this->content = $this->content;
+		$this->author = $this->author;
+		$this->image = $this->image;
+
+		$query->bind_param("ssiisi", $this->title, $this->summary, $this->content, $this->author, $this->image, $this->id);
+
+		if($query->execute()){
+			return true;
+		}
+
+		return false;
+ }
 ?>
