@@ -12,3 +12,19 @@ CREATE TABLE `news` (<br>
   `date` varchar(100) NOT NULL<br>
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;<br>
 
+
+
+<br> ******************************************* <br>
+Add news <br>
+request/add. <br>
+json <br>
+
+{ <br>
+"title": "News headline",<br>
+"summary": "News summery",<br>
+"content":"Let this be the news content",<br>
+"author":"Adam",<br>
+"image":"newImageURL",<br>
+"date":"2022-05-01 22:00" <br>
+}<br>
+ 
