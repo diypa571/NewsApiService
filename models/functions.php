@@ -77,7 +77,7 @@ class Article {
 		$this->author = $this->author;
 		$this->image = $this->image;
 
-		$query->bind_param("ssiisi", $this->title, $this->summary, $this->content, $this->author, $this->image, $this->id);
+		$query->bind_param("ssssss", $this->title, $this->summary, $this->content, $this->author, $this->image, $this->id);
 
 		if($query->execute()){
 			return true;
