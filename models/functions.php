@@ -77,6 +77,7 @@ function update(){
 	$this->author = $this->author;
 	$this->image = $this->image;
 	// for the bind_param function, s => string, i => integer
+	// with bind_param,  bind all the variables to the parameters
 	$query->bind_param("sssssi", $this->title, $this->summary, $this->content, $this->author, $this->image, $this->id);
 
 	if($query->execute()){
