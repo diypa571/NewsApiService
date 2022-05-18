@@ -77,7 +77,7 @@ function update(){
 	$this->author = $this->author;
 	$this->image = $this->image;
 
-	$query->bind_param("ssssss", $this->title, $this->summary, $this->content, $this->author, $this->image, $this->id);
+	$query->bind_param("sssssi", $this->title, $this->summary, $this->content, $this->author, $this->image, $this->id);
 
 	if($query->execute()){
 		return true;
